@@ -9,16 +9,23 @@
 git clone https://github.com/liruiw/OMG-Planner.git --recursive
 ```
 
-0. Setup: Ubuntu 16.04 or above, CUDA 10.0 or above
+0. Setup: Ubuntu 18.04 or above, CUDA 10.0 or above
 
 1. Install [anaconda](https://docs.anaconda.com/anaconda/install/) and create the virtual env for python 2 / 3
+
+ 
  
     ```angular2html
     conda create --name omg python=3.6.9/2.7.15
     conda activate omg
     pip install -r requirements.txt
     ``` 
-
+   ```bash
+      apt-get install libegl1-mesa-dev
+      apt-get install python-pyassimp
+      sudo apt-get install libassimp-dev
+      pip install pyassimp==4.1.3
+   ```
 2. Install [ycb_render](ycb_render)  
 
     ```Shell
