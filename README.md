@@ -6,7 +6,7 @@
 
 ### Installation
 ```bash
-git clone https://github.com/liruiw/OMG-Planner.git --recursive
+git clone https://github.com/tjdalsckd/OMG-Planner --recursive
 ```
 
 0. Setup: Ubuntu 18.04 or above, CUDA 10.0 or above
