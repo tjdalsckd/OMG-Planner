@@ -18,6 +18,8 @@ git clone https://github.com/tjdalsckd/OMG-Planner --recursive
     ```angular2html
     conda create --name omg python=3.6.9/2.7.15
     conda activate omg
+    cd OMG-Planner
+    export OMG_HOME=$PWD
     pip install -r requirements.txt
     ``` 
    ```bash
@@ -29,6 +31,7 @@ git clone https://github.com/tjdalsckd/OMG-Planner --recursive
 2. Install [ycb_render](ycb_render)  
 
     ```Shell
+    cd  $OMG_HOME
     cd ycb_render
     python setup.py develop
     ```
@@ -36,6 +39,7 @@ git clone https://github.com/tjdalsckd/OMG-Planner --recursive
 3. Install the submodule Sophus. Check if the submodule is correctly downloaded.
 
     ```Shell
+    cd  $OMG_HOME
     cd Sophus
     mkdir build
     cd build
@@ -49,12 +53,14 @@ git clone https://github.com/tjdalsckd/OMG-Planner --recursive
 
 5. Compile the new layers under layers we introduce.
     ```Shell
+    cd  $OMG_HOME
     cd layers
     python setup.py install
     ```
 6. Install the submodule PyKDL. Check this tutorial [here](https://git.ias.informatik.tu-darmstadt.de/lutter/ias_pykdl/blob/8b864ccf81763439ba5d45a359e1993208c2247c/pykdl.md) if there is any issue with installing PyKDL.
 
     ```bash
+    cd  $OMG_HOME
     cd orocos_kinematics_dynamics
     cd sip-4.19.3
     python configure.py
