@@ -74,8 +74,8 @@ git clone https://github.com/tjdalsckd/OMG-Planner --recursive
       
     cd ../../python_orocos_kdl
     mkdir build; cd build;
-    cmake ..  -DPYTHON_VERSION=3.6.9 -DPYTHON_EXECUTABLE=~/anaconda2/envs/omg/bin/python3.6
-    make -j8;  cp PyKDL.so ~/anaconda2/envs/omg/lib/python3.6/site-packages/
+    cmake ..  -DPYTHON_VERSION=3.6.9 -DPYTHON_EXECUTABLE=~/anaconda3/envs/omg/bin/python3.6
+    make -j8;  cp PyKDL.so ~/anaconda3/envs/omg/lib/python3.6/site-packages/
     ```
      
 
