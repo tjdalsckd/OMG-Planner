@@ -13,13 +13,14 @@ git clone https://github.com/tjdalsckd/OMG-Planner --recursive
 
 1. Install [anaconda](https://docs.anaconda.com/anaconda/install/) and create the virtual env for python 2 / 3
 
- 
+ ### Anaconda
  
     ```angular2html
-    conda create --name omg python=3.6.9/2.7.15
+    conda create --name omg python=3.6.9
     conda activate omg
     cd OMG-Planner
     export OMG_HOME=$PWD
+    export VENV_OMG=~/anaconda3/envs/omg/bin/python3.6
     pip install -r requirements.txt
     ``` 
    ```bash
@@ -28,6 +29,29 @@ git clone https://github.com/tjdalsckd/OMG-Planner --recursive
       sudo apt-get install libassimp-dev
       pip install pyassimp==4.1.3
    ```
+   
+  ### Virtualenv
+    ```angular2html
+    apt-get install virtualenv
+
+    cd OMG-Planner
+    virtualenv omg
+    source omg/bin/activate
+    export OMG_HOME=$PWD
+    export VENV_OMG=$PWD/omg/bin
+
+    pip install -r requirements.txt
+    ``` 
+   ```bash
+      apt-get install libegl1-mesa-dev
+      apt-get install python-pyassimp
+      sudo apt-get install libassimp-dev
+      pip install pyassimp==4.1.3
+   ```
+   
+   
+   
+   
 2. Install [ycb_render](ycb_render)  
 
     ```Shell
@@ -63,7 +87,7 @@ git clone https://github.com/tjdalsckd/OMG-Planner --recursive
     cd  $OMG_HOME
     cd orocos_kinematics_dynamics
     cd sip-4.19.3
-    python configure.py
+    ./$VENV_OMG/python configure.py
     make -j16; sudo make install
      
     export ROS_PYTHON_VERSION=3
@@ -74,8 +98,8 @@ git clone https://github.com/tjdalsckd/OMG-Planner --recursive
       
     cd ../../python_orocos_kdl
     mkdir build; cd build;
-    cmake ..  -DPYTHON_VERSION=3.6.9 -DPYTHON_EXECUTABLE=~/anaconda3/envs/omg/bin/python3.6
-    make -j8;  cp PyKDL.so ~/anaconda3/envs/omg/lib/python3.6/site-packages/
+    cmake ..  -DPYTHON_VERSION=3.6.9 -DPYTHON_EXECUTABLE=$VENV_OMG/bin/python3.6
+    make -j8;  cp PyKDL.so $VENV_OMG/lib/python3.6/site-packages/
     ```
      
 
