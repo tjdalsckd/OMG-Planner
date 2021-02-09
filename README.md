@@ -44,7 +44,7 @@ git clone https://github.com/tjdalsckd/OMG-Planner --recursive
     mkdir build
     cd build
     cmake ..
-    make -j8
+    make -j16
     sudo make install
     ```
 
@@ -64,7 +64,7 @@ git clone https://github.com/tjdalsckd/OMG-Planner --recursive
     cd orocos_kinematics_dynamics
     cd sip-4.19.3
     python configure.py
-    make -j8; sudo make install
+    make -j16; sudo make install
      
     export ROS_PYTHON_VERSION=3
     cd ../orocos_kdl
