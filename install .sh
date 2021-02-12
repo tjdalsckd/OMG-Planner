@@ -9,9 +9,9 @@ cd OMG-Planner &&
 export OMG_HOME=$PWD &&
 export VENV_OMG=~/anaconda3/envs/omg/bin/python3.6 &&
 pip install -r requirements.txt &&
-apt-get install libegl1-mesa-dev &&
-apt-get install python-pyassimp &&
-sudo apt-get install libassimp-dev &&
+apt-get install -y libegl1-mesa-dev &&
+apt-get install -y python-pyassimp &&
+sudo apt-get install -y libassimp-dev &&
 pip install pyassimp==4.1.3 &&
 
 cd  $OMG_HOME &&
