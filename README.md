@@ -99,12 +99,11 @@ git clone https://github.com/tjdalsckd/OMG-Planner --recursive
     cd ../../python_orocos_kdl
     mkdir build; cd build;
     
-    catkin_pkg => only python2, check CMakeList.txt
+    cmake-gui .. >> change orocos_kdl ligraries location
     
     
-    
-    cmake ..  -DPYTHON_VERSION=3.6.9 -DPYTHON_EXECUTABLE=$VENV_OMG/bin/python3.6
-    make -j8;  cp PyKDL.so $VENV_OMG/lib/python3.6/site-packages/
+    cmake ..  -DPYTHON_VERSION=3.6.9 -DPYTHON_EXECUTABLE=~/anaconda3/envs/omg/bin/python3.6
+    make -j8;  cp PyKDL.so ~/anaconda3/envs/omg/lib/python3.6/site-packages/
     ```
      
 
