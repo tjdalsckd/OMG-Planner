@@ -41,5 +41,5 @@ make -j16; sudo make install &&
   
 cd ../../python_orocos_kdl &&
 mkdir build; cd build &&
-cmake ..  -DPYTHON_VERSION=3.6.9 -DPYTHON_EXECUTABLE=$VENV_OMG/bin/python3.6 &&
-make -j16;  cp PyKDL.so $VENV_OMG/lib/python3.6/site-packages/
+cmake ..  -DPYTHON_VERSION=3.6.9 -DPYTHON_EXECUTABLE=~/anaconda3/envs/omg/bin/python3.6/bin/python3.6 &&
+make -j16;  cp PyKDL.so ~/anaconda3/envs/omg/bin/python3.6/lib/python3.6/site-packages/
