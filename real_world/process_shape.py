@@ -12,9 +12,9 @@ import numpy.random as npr
 import os
 import multiprocessing
 import subprocess
+from . import gen_xyz
 
 try:
-    from . import gen_xyz
     from . import gen_sdf
     from . import convert_sdf
     from . import gen_convex_shape
